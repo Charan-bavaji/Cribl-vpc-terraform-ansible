@@ -11,7 +11,8 @@ and a second VPC connected via VPC Peering.
 
 ## Architecture
 
-![Architecture diagram](docs/architecture-diagram.png)
+<img width="1536" height="1024" alt="Crible-Project" src="https://github.com/user-attachments/assets/88dbc8ea-743f-434a-8223-4dc750cd80f6" />
+
 
 ```
 User → Internet Gateway (VPC1) → ALB (2 public subnets)
