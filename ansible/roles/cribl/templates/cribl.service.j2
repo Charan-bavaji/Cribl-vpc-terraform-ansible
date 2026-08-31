@@ -1,0 +1,13 @@
+[Unit]
+Description=Cribl Stream
+After=network.target
+
+[Service]
+Type=forking
+User=cribl
+ExecStart={{ cribl_install_dir }}/bin/cribl start
+ExecStop={{ cribl_install_dir }}/bin/cribl stop
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

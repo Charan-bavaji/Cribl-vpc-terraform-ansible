@@ -1,0 +1,6 @@
+---
+- name: Install and start Cribl on all Cribl nodes
+  hosts: all
+  become: true
+  roles:
+    - cribl

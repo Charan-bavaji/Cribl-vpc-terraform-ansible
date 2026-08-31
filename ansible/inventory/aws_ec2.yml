@@ -1,0 +1,13 @@
+# Dynamic inventory: instead of a static list of IPs (which change every
+# time instances are destroyed/recreated), this asks AWS directly for
+# every instance tagged Role=cribl, right now, and uses it automatically.
+plugin: aws_ec2
+regions:
+  - ap-south-1
+filters:
+  tag:Role: cribl
+  instance-state-name: running
+hostnames:
+  - private-ip-address
+compose:
+  ansible_host: private_ip_address
